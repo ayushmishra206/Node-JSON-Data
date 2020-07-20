@@ -1,0 +1,15 @@
+node.content:
+  path: "/admin/config/node_json_data/settings"
+  defaults:
+    # _controller: '\Drupal\node_json_data\Controller\NodeController::content'
+    _form: '\Drupal\node_json_data\Form\NodeJsonApiForm'
+    _title: "Node JSON Data Module"
+  requirements:
+    _permission: "administer site configuration"
+node.data:
+  path: "/data/{api_key}/{node_id}"
+  defaults:
+    _controller: '\Drupal\node_json_data\Controller\NodeController::data'
+    _title: "JSON Data"
+  requirements:
+    _permission: "access content"

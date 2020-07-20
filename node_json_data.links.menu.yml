@@ -1,0 +1,6 @@
+node.admin:
+  title: "Node JSON Data module settings"
+  description: "This where you can use the Node JSON API Form from."
+  parent: system.admin_config_development
+  route_name: node.content
+  weight: 100
