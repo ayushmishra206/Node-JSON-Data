@@ -5,8 +5,3 @@
 4. Once the route is accessed and everything is right, return JSON data on the node.
 5. Push all the code on github."
 
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/ayushmishra206/Node-JSON-Data.git
-git push -u origin master
