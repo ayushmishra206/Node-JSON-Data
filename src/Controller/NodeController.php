@@ -20,6 +20,7 @@ class NodeController extends ControllerBase {
    
   public function data($api_key, $node_id) {
     $config = \Drupal::config('node_json_data.adminsettings');
+    $error= array('error'=>'Wrong API KEY or INVALID NODE ID');
     if ($api_key==$config->get('api_key')) {
       $json_array = array(
         'data' => array()
@@ -40,6 +41,6 @@ class NodeController extends ControllerBase {
       return new JsonResponse($json_array);
     }
     else 
-      return 'Wrong API KEY or INVALID NODE ID';    
+      return new JsonResponse($error);    
   }
 }
